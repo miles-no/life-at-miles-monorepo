@@ -6,3 +6,6 @@
 	path = backend
 	url = https://github.com/miles-no/LifeAtMiles.Backend.git
 	branch = dev
+[submodule ".claude/skills/miles-brand"]
+	path = .claude/skills/miles-brand
+	url = https://github.com/miles-no/brand.git

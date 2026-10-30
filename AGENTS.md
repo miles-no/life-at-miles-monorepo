@@ -2,6 +2,10 @@
 
 Umbrella repo for Life at Miles: `frontend/` (React Router, TypeScript) and `backend/` (C# API) are git submodules. See `README.md` for setup (`./setup.sh`, `./dev.sh`). Each submodule has its own `CLAUDE.md`; work inside a submodule as in any normal repo and open PRs against that repo, not this one.
 
+## Brand
+
+For anything that should look or sound like Miles (UI, colours, type, logo, icons, copy), use the `miles-brand` skill. It is the `miles-no/brand` repo, vendored as a submodule at `.claude/skills/miles-brand`; the brand guide PDF inside it outranks the restated docs.
+
 ## Colour contrast: default to APCA
 
 Judge text legibility with **APCA** (Lc, the WCAG 3 draft model), not just the WCAG 2.x ratio. WCAG 2.x says black on the brand red `#ff303b` is fine (5.7:1) but APCA scores it Lc 42, and it reads poorly; white on that red is 3.7:1 but Lc 68. Neither model alone is enough.

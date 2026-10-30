@@ -6,6 +6,7 @@ Umbrella repo for Life at Miles, using git submodules.
 | --- | --- | --- |
 | `frontend/` | [miles-no/life-at-miles](https://github.com/miles-no/life-at-miles) | Web app (React Router, TypeScript) |
 | `backend/` | [miles-no/LifeAtMiles.Backend](https://github.com/miles-no/LifeAtMiles.Backend) | API (C#) |
+| `.claude/skills/miles-brand/` | [miles-no/brand](https://github.com/miles-no/brand) | Miles brand skill for coding agents (colours, type, logo, UI theme) |
 
 ## Getting started
 
