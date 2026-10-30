@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# One-time setup: submodules, backend config + DB, frontend env + deps.
+# One-time setup: init submodules and install frontend dependencies.
+# No secrets needed; ./dev.sh supplies placeholder config.
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -8,13 +9,7 @@ for cmd in git docker dotnet node npm; do
 done
 
 git submodule update --init --recursive
-
-(cd backend && ./setup-dev.sh)
-
-if [ ! -f frontend/.env.local ]; then
-  cp frontend/.env.example frontend/.env.local
-  echo "Created frontend/.env.local - add AZURE_CLIENT_SECRET (ask a maintainer, see frontend/README.md)."
-fi
 npm --prefix frontend ci
+dotnet restore backend/LifeAtMiles.Backend.sln
 
 echo "Done. Start everything with ./dev.sh"

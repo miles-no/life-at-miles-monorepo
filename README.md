@@ -14,11 +14,13 @@ Prerequisites: git, Docker (or Podman), .NET 10 SDK, Node.
 ```bash
 git clone --recurse-submodules https://github.com/miles-no/life-at-miles-monorepo.git
 cd life-at-miles-monorepo
-./setup.sh   # one-time: config, database, dependencies
+./setup.sh   # one-time: submodules and dependencies
 ./dev.sh     # starts Postgres, API (:5108) and frontend (:5173)
 ```
 
-Login needs `AZURE_CLIENT_SECRET` in `frontend/.env.local` (ask a maintainer, see `frontend/README.md`).
+Open http://localhost:5173 and sign in with the **Regular / Servant / Admin** dev-login buttons. No secrets are needed: `dev.sh` supplies placeholder config, and Flowcase, Slack etc. use the backend's no-op clients.
+
+To sign in with real Microsoft accounts or use real integrations, put real values in `frontend/.env.local` / the backend's `appsettings.Development.json` instead (see each repo's README).
 
 ## Updating submodules
 
