@@ -9,11 +9,16 @@ Umbrella repo for Life at Miles, using git submodules.
 
 ## Getting started
 
+Prerequisites: git, Docker (or Podman), .NET 10 SDK, Node.
+
 ```bash
 git clone --recurse-submodules https://github.com/miles-no/life-at-miles-monorepo.git
-# or, in an existing clone:
-git submodule update --init --recursive
+cd life-at-miles-monorepo
+./setup.sh   # one-time: config, database, dependencies
+./dev.sh     # starts Postgres, API (:5108) and frontend (:5173)
 ```
+
+Login needs `AZURE_CLIENT_SECRET` in `frontend/.env.local` (ask a maintainer, see `frontend/README.md`).
 
 ## Updating submodules
 
