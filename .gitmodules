@@ -1,0 +1,8 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/miles-no/life-at-miles.git
+	branch = dev
+[submodule "backend"]
+	path = backend
+	url = https://github.com/miles-no/LifeAtMiles.Backend.git
+	branch = dev
